@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Iniciar sesión</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="loginForms" (ngSubmit)="onLogin(loginForms.value)">
+            <p>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="text" placeholder="Email" formControlName="email" required>
+                    <mat-error *ngIf="showError1">Correo Invalido</mat-error>
+                    <mat-error *ngIf="showError2">Correo no registrado</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="password" placeholder="Password" formControlName="password" required>
+                    <mat-error *ngIf="showError3">Contraseña Invalida</mat-error>
+                </mat-form-field>
+            </p>
+            <button type="submit" mat-raised-button color="primary">Iniciar Sesión</button>
+            <p> No tienes cuenta?
+                <span class="link" (click)="gotoSingup()">Registrate</span>
+            </p>
+        </form>
+    </mat-card-content>
+</mat-card>

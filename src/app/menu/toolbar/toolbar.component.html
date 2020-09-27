@@ -1,0 +1,9 @@
+<div class="menu">
+    <img class="bambu-img" src="../../../assets/img/woolworth@3x.png" alt="Bambu">
+    <p class="titulo-toolbar">Noticias</p>
+    <div *ngIf="authServ.userData | async" (click)="onLogout()">
+        <p>
+            {{email}}<img src="../../../assets/img/admin.svg" alt="User">
+        </p>
+    </div>
+</div>

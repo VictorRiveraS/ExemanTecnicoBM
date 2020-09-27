@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>Registro</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="loginForms" (ngSubmit)="onSingUp(loginForms.value)">
+            <p>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="text" placeholder="Email" formControlName="email">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </p>
+            <button type="submit" mat-raised-button color="primary">Registrase</button>
+            <p>
+                Ya tienes cuenta?
+                <span class="link" (click)="gotoLogin()">Login</span>
+            </p>
+        </form>
+    </mat-card-content>
+</mat-card>

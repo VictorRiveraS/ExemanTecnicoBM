@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "examen-tecnico-victor-rivera": {
+      "hosting": {
+        "ExamenTecnico": [
+          "examen-tecnico-victor-rivera"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "examen-tecnico-victor-rivera"
+  }
+}
